@@ -1,0 +1,364 @@
+/* *************************
+        Global Classes
+************************** */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+/* **************************
+            Header Section
+*****************************/
+
+.header {
+    width: 100%;
+    height: 60vh;
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.header .header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20%;
+    padding-top: 30px;
+    justify-content: space-between;
+}
+
+.header-menu .logo img {
+    width: 90px;
+}
+
+.menu ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.menu ul li::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #EF654C;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.menu ul li:hover::after {
+    width: 100%;
+}
+
+.menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-size: 42px;
+    font-style: italic;
+    margin-top: 110px;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+i.fa-solid.fa-quote-left {
+    position: absolute;
+    left: 375px;
+    top: -10px;
+    font-size: 38px;
+    color: #EF664D;
+}
+
+i.fa-solid.fa-quote-right {
+    position: absolute;
+    right: 375px;
+    top: -10px;
+    font-size: 38px;
+    color: #EF664D;
+}
+
+
+/* **************************
+        About Section
+************************** */
+
+.about-section {
+    width: 100%;
+    margin: 50px 0;
+}
+
+.about-content {
+    margin: 0% 15%;
+    display: flex;
+}
+
+.about-section .h-about {
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-content .img {
+    width: 500px;
+    height: 134px;
+    margin-left: 50px;
+    border: 3px solid #EF664D;
+    background-image: url(../images/about.jpg);
+    background-size: cover;
+    box-shadow: 0px 0px 10px rgb(97 91 91);
+}
+
+.about-text {
+    margin-left: 100px;
+}
+
+
+/* *****************************
+        Service Section
+***************************** */
+
+.service-section {
+    width: 100%;
+    background: #2E3E4E;
+    padding: 50px 0;
+}
+
+.service-section .h-service {
+    text-align: center;
+    color: #EF654C;
+    margin-bottom: 46px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.all-service {
+    display: flex;
+    margin: 0% 18%;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    text-align: center;
+}
+
+.all-service ul li {
+    list-style: none;
+    padding: 6px 0;
+}
+
+.service-items .f-awsome {
+    width: 36px;
+    height: 32px;
+    background: #EF664D;
+    border-radius: 2px 16px;
+    line-height: 32px;
+    margin-bottom: 17px;
+}
+
+.service-items .check {
+    color: #EF654C;
+    margin-right: 5px;
+}
+
+.service-items p {
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.service-items .btn {
+    width: 104px;
+    height: 32px;
+    display: inline-block;
+    padding: 8px 14px;
+    background: #EF654C;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 16px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+}
+
+.btn:hover {
+    color: #2E3E4E;
+}
+
+.btn-one::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+    background: yellow;
+    transition: .3s;
+    z-index: -1;
+}
+
+.btn-one:hover::before {
+    width: 100%;
+}
+
+.btn-two::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    background: yellow;
+    transition: .3s;
+    z-index: -1;
+}
+
+.btn-two:hover::before {
+    height: 100%;
+}
+
+.btn-three::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    background: yellow;
+    transition: .3s;
+    z-index: -1;
+}
+
+.btn-three:hover::before {
+    width: 100%;
+}
+
+
+/* ************************
+        Contact Form
+************************ */
+
+.contact-form {
+    margin: 50px;
+    width: 100%;
+}
+
+.contact-form .h-contact {
+    text-align: center;
+    color: #2E3E4E;
+    margin-bottom: 14px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact-form .form {
+    text-align: center;
+    margin: 0 20%;
+}
+
+.contact-form input[type="text"] {
+    width: 70%;
+    padding: 11px 5px;
+    border: none;
+    border-bottom: 2px solid #EF664D;
+    outline: none;
+}
+
+.contact-form .contact-btn {
+    display: inline-block;
+    padding: 7px 111px;
+    background: #EF664D;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    outline: none;
+    box-shadow: 3px 3px 7px grey;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-btn::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #782207;
+    transition: width .3s;
+    z-index: -1;
+}
+
+.contact-btn:hover::before {
+    width: 50%;
+}
+
+.contact-btn::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #502618;
+    transition: width .3s;
+    z-index: -1;
+}
+
+.contact-btn:hover::after {
+    width: 50%;
+}
+
+.contact-form a {
+    text-decoration: none;
+}
+
+
+/* ************************
+        Fotter Section
+************************* */
+
+.fotter {
+    width: 100%;
+    padding: 35px;
+    text-align: center;
+    background: #2E3E4E;
+}
+
+.fotter p {
+    color: #fff;
+}
+
+.fotter p span {
+    color: #EF654C;
+}
